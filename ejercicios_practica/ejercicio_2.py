@@ -46,4 +46,17 @@ if __name__ == '__main__':
 
     # Crear acá su gráfico
 
+    figu = plt.figure()
+    ax = figu.add_subplot()
+    ax.plot(x,y1,color = 'orangered', label= r'$f_{1}(x)$ = $x^{2}$')
+    ax.plot(x,y2,color = 'indigo', label= r'$f_{2}(x)$ = $x^{3}$')
+    ax.set_facecolor('floralwhite') #no lo pide, pero queda lindo =)
+    ax.set_title('Funciones cuadrática y cúbica') #no lo pide, pero queda lindo =)
+    ax.set_xlabel('X: abscisas')
+    ax.set_ylabel('Y: ordenadas')
+
+    ax.legend()
+    plt.show()
+
+
     print("terminamos")

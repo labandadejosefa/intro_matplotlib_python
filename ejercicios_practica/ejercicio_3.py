@@ -34,4 +34,17 @@ if __name__ == '__main__':
 
     # Crear acá su gráfico
 
+    figu = plt.figure()
+    ax = figu.add_subplot()
+    ax.scatter(x,y,color = 'darkcyan', marker= '.', label= r'f(x) = $\tanh \ (x)$')
+    ax.set_facecolor('floralwhite')
+    ax.set_title(r'Tangente hiperbólica', size=16)
+    ax.grid('solid')
+    ax.set_xlabel('X: abscisas')
+    ax.set_ylabel('Y: ordenadas')
+
+    ax.legend()
+    plt.show()
+
+
     print("terminamos")

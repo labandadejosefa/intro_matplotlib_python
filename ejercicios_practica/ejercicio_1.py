@@ -8,6 +8,7 @@
 # que aparecen en verde con el hashtag "#"
 
 # Ejercicios de matplotlib
+from cProfile import label
 import numpy as np
 import matplotlib.pyplot as plt
 
@@ -34,5 +35,17 @@ if __name__ == '__main__':
     # Darle color a la línea a su elección
 
     # Crear acá su gráfico
+
+    figu = plt.figure()
+    ax = figu.add_subplot()
+    ax.plot(x,y,color = 'green', label= r'f(x) = $x^{2}$')
+    ax.set_facecolor('whitesmoke') #no lo pide, pero queda lindo =)
+    ax.set_title('Función cuadrática') #no lo pide, pero queda lindo =)
+    ax.set_xlabel('X abscisas')
+    ax.set_ylabel('Y ordenadas')
+
+
+    ax.legend()
+    plt.show()
 
     print("terminamos")
